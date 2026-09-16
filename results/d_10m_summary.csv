@@ -1,0 +1,3 @@
+algorithm,n,S,comparisons,cpu_run_1,cpu_run_2,cpu_run_3,median_cpu_time,absolute_comparison_difference_hybrid_minus_merge,percentage_comparison_difference,absolute_median_cpu_difference_hybrid_minus_merge,percentage_median_cpu_difference,merge_over_hybrid_speedup_ratio
+Hybrid Merge/Insertion Sort,10000000,16.0,226415036,54.28125,53.578125,53.328125,53.578125,6316704,2.869946329261596,-6.78125,-11.234791612736215,1.126567512394284
+Original Merge Sort,10000000,,220098332,60.1875,60.953125,60.359375,60.359375,6316704,2.869946329261596,-6.78125,-11.234791612736215,1.126567512394284
