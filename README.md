@@ -16,13 +16,16 @@ The executed notebook [`SC2001_Project_1_Hybrid_Sort.ipynb`](SC2001_Project_1_Hy
 
 ## Findings
 
-- Part (c)(ii) comparison optimum: `S = 1`.
+- Part (c)(ii) comparison minimum: `S = 1` and `S = 2` tied at 3,272,851 comparisons.
 - Part (c)(iii) comparison optimum over its tested range: `S = 2`.
-- Near-best practical timing region under the declared 3% aggregate rule: `S = 8, 12, 16, 20, 24`.
-- Selected part (d) threshold: `S = 16`, the central tested representative of that region, not a uniquely optimal value.
+- Part (c)(iii) per-size measured minima, using the first minimum where quantized medians tie: `S = 8, 12, 12, 20` for `n = 100,000, 500,000, 1,000,000, 2,000,000`.
+- Broad near-optimal practical timing region under the declared 3% aggregate rule: approximately `S = 8-24` (`S = 8, 12, 16, 20, 24` were included).
+- Selected part (d) threshold: `S = 16`, a reasonable central representative of that region, not a uniquely or exactly optimal value.
 - Original Merge Sort at 10 million: 220,098,332 comparisons; CPU runs 60.187500, 60.953125, 60.359375 s; median 60.359375 s.
 - Hybrid Sort at 10 million with `S = 16`: 226,415,036 comparisons; CPU runs 54.281250, 53.578125, 53.328125 s; median 53.578125 s.
 - Hybrid difference: +6,316,704 comparisons (+2.870%) and -6.781250 median CPU seconds (-11.235%); Merge/Hybrid median-time ratio 1.127x.
+
+The hybrid speedup did not result from fewer comparisons: it performed more comparisons. CPU time also reflects ordinary implementation overhead, and the hybrid avoids some recursive Merge Sort and small-merge overhead by using Insertion Sort on small subarrays.
 
 The effective Windows process CPU clock remained quantized at 0.015625 s despite using the nanosecond API. Larger trials, five-run medians, and the 3% near-tie rule make the practical conclusion more defensible without pretending the clock quantum disappeared.
 
