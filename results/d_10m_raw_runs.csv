@@ -1,7 +1,7 @@
 sequence_position,algorithm,algorithm_run,n,S,comparisons,cpu_time
-1,Original Merge Sort,1,10000000,,220098332,60.1875
-2,Hybrid Merge/Insertion Sort,1,10000000,16.0,226415036,54.28125
-3,Hybrid Merge/Insertion Sort,2,10000000,16.0,226415036,53.578125
-4,Original Merge Sort,2,10000000,,220098332,60.953125
-5,Original Merge Sort,3,10000000,,220098332,60.359375
-6,Hybrid Merge/Insertion Sort,3,10000000,16.0,226415036,53.328125
+1,Original Merge Sort,1,10000000,,220098332,26.484375
+2,Hybrid Merge/Insertion Sort,1,10000000,24.0,242308266,23.625
+3,Hybrid Merge/Insertion Sort,2,10000000,24.0,242308266,23.65625
+4,Original Merge Sort,2,10000000,,220098332,26.28125
+5,Original Merge Sort,3,10000000,,220098332,26.203125
+6,Hybrid Merge/Insertion Sort,3,10000000,24.0,242308266,23.65625
